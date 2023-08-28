@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'como andas querido?'
+                sh 'python --version'
             }
         }
     }
