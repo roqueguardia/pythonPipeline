@@ -1,3 +1,4 @@
+/*hola*/
 pipeline {
     agent { dockerfile true }
     stages {
