@@ -1,6 +1,7 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-     agent {     
+     agent any
+     
          stages {
                stage('Initialize'){
              def dockerHome = tool 'myDocker'
@@ -14,5 +15,5 @@ pipeline {
                    }
             }
         }
-    }
+    
 }
