@@ -4,8 +4,11 @@ pipeline {
      
          stages {
                stage('Initialize'){
-             def dockerHome = tool 'myDocker'
-             env.PATH = "${dockerHome}/bin:${env.PATH}"}
+                    steps{       
+                  def dockerHome = tool 'myDocker'
+                  env.PATH = "${dockerHome}/bin:${env.PATH}"
+                    }     
+                                   }     
          
                stage{ docker { image 'python:3.11.5-alpine3.18' } }
              
